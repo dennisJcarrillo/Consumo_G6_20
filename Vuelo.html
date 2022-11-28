@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUD Vuelo</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/Vuelo.js"></script>
+</head>
+<body>
+   <div class="container">
+    <div class="consulta mt6">
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    Lista de vuelos
+                </h3>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="table table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Codigo Vuelo</th>
+                            <th>Ciudad Origen</th>
+                            <th>Ciudad Destino</th>
+                            <th>Fecha Vuelo</th>
+                            <th>Cantidad Pasajeros</th>
+                            <th>Tipo Avión</th>
+                            <th>Distancia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="DataVuelos">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="formulario mt6">
+        <div class="row">
+            <div class="col-12">
+                <h3>Agregar Vuelo</h3>
+            </div>
+        </div>
+        <div class="col-12">
+            <form action="" class="vuelo">
+                <label for="">Codigo Vuelo</label>
+                <input type="text" id="codVuelo" class="form-control" placeholder="Ingrese el codigo de vuelo">
+                <label for="">Ciudad Origen</label>
+                <input type="text" id="ciudOrigen" class="form-control" placeholder="Ingrese la ciudad de origen">
+                <label for="">Ciudad Destino</label>
+                <input type="text" id="ciudDestino" class="form-control" placeholder="Ingrese la ciudad de destino">
+                <label for="">Fecha de Vuelo</label>
+                <input type="date" id="Fecha" class="form-control" >
+                <label for="">Cantidad de Pasajeros</label>
+                <input type="text" id="cantPasajeros" class="form-control" placeholder="Ingrese la cantidad de pasajeros">
+                <label for="">Tipo de Avión</label>
+                <input type="text" id="tipoAvion" class="form-control" placeholder="Ingrese el tipo de avión">
+                <label for="">Distancia</label>
+                <input type="text" id="Distancia" class="form-control" placeholder="Ingrese la ciudad de origen">
+                <hr>
+                <div id="btnAgregarVuelo">
+                    <input type="submit" value="Agregar vuelo" class="btn btn-success" id="btnAgregar" onclick="AgregarVuelo()">
+                </div>
+            </form>
+        </div>
+    </div>
+   </div> 
+
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
