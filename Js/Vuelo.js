@@ -64,12 +64,17 @@ function AgregarVuelo() {
         contentType:'application/json',
         success:function (reponse) {
             console.log(reponse);
-            alert('Vuelo ingresado correctamente');
+            //alert('Vuelo ingresado correctamente');
         },
         error:function (textError, errorThrow) {
             alert('Error '+textError+' '+errorThrow)
         }
     });
+    if (success = true) {
+        alert('Vuelo '+datosVuelo.codigo_vuelo+' ingresado correctamente');
+    }else {
+        alert('Error '+textError+' '+errorThrow)
+    }
 
 }
 
@@ -140,16 +145,21 @@ function ActualizarVuelo(p_codigo_vuelo) {
 
                 $('#btnAgregarVuelo').html(btnActualizar);
 
-                alert('Pasajero actualizado de forma exitosa!')
+                
                 
             }
             
-            
+            console.log(reponse);
         },
         error: function(texError, errorThrow){
             alert('Error '+texError+' '+errorThrow);
           }
     })
+    if (success = true) {
+        alert('Vuelo '+datosVuelo.codigo_vuelo+' actualizado correctamente');
+    }else {
+        alert('Error '+textError+' '+errorThrow)
+    }
 }
 
 function BorrarVuelo(p_codigo_vuelo) {
@@ -167,7 +177,12 @@ function BorrarVuelo(p_codigo_vuelo) {
         contentType:'application/json',
 
         success: function(res){
-            alert('Pasajero '+pasajeroEliminar.codigo_pasajero+' eliminado correctamente!!');
+            //lert('Vuelo '+datosVuelo.codigo_vuelo+' eliminado correctamente!!');
           }
     })
+    if (success = true) {
+        alert('Vuelo '+datosVuelo.codigo_vuelo+' eliminado correctamente');
+    }else {
+        alert('Hubo un error al intentar borrar el vuelo')
+    }
 }

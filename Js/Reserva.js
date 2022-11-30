@@ -62,9 +62,10 @@ function AgregarReserva() {
       alert('Reserva ingresada de forma correcta!');
     },
     error: function(texError, errorThrow){
-      alert('Error '+texError+' '+errorThrow);
+      //alert('Error '+texError+' '+errorThrow);
     }
   });
+  alert('Reserva ingresada de forma correcta!');
 }
 
 function cargarReserva(p_numReservacion){
@@ -99,8 +100,8 @@ function cargarReserva(p_numReservacion){
       alert('Error '+ textStatus + errorThrown);
     }
   });
+    
 }
-
 function ActualizarReserva(){
   let Reserva = {
     numero_reservacion: $('#numero_Reservacion').val(),
@@ -123,9 +124,10 @@ function ActualizarReserva(){
       alert('Reserva actualizada de forma correcta!');
     },
     error: function(texError, errorThrow){
-      alert('Error '+texError+' '+errorThrow);
+      //alert('Error '+texError+' '+errorThrow);
     }
   });
+  alert('Reserva '+Reserva.numero_reservacion+' actualizada correctamente');
 }
 
 function EliminarReserva(p_numReservacion){
@@ -143,6 +145,7 @@ function EliminarReserva(p_numReservacion){
         alert('Reserva '+reservaEliminar.numero_Reservacion+' eliminada correctamente!!');
       }
   });
+  alert('Reserva '+reservaEliminar.numero_reservacion+' eliminada correctamente!!');
   window.location.reload();
 }
 //Función para recargar la página de forma automatica donde se requiere, especificamente para el botón cancelar

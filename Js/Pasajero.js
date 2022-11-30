@@ -59,12 +59,18 @@ function AgregarPasajero() {
     contentType: 'application/json',
     success: function(res){
       console.log(res);
-      alert('Pasajero ingresado de forma exitosa!');
+      //alert('Pasajero ingresado de forma exitosa!');
     },
     error: function(texError, errorThrow){
-      alert('Error '+texError+' '+errorThrow);
+      //alert('Error '+texError+' '+errorThrow);
     }
   });
+
+  if (success = true) {
+    alert('Pasajero '+nuevoPasajero.codigo_pasajero+' ingresado correctamente');
+  }else {
+    alert('Error '+textError+' '+errorThrow)
+  }
 }
 
 function cargarPasajero(p_codPasajero){
@@ -120,12 +126,14 @@ function ActualizarPasajero(){
     contentType: 'application/json',
     success: function(res){
       console.log(res);
-      alert('Pasajero actualizado de forma exitosa!');
+      //alert('Pasajero actualizado de forma exitosa!');
     },
     error: function(texError, errorThrow){
-      alert('Error '+texError+' '+errorThrow);
+      //alert('Error '+texError+' '+errorThrow);
     }
   });
+  alert('Pasajero '+Pasajero.codigo_pasajero+' actualizado correctamente');
+
 }
 
 function EliminarPasajero(p_codPasajero){
@@ -143,6 +151,7 @@ function EliminarPasajero(p_codPasajero){
         alert('Pasajero '+pasajeroEliminar.codigo_pasajero+' eliminado correctamente!!');
       }
   });
+  alert('Pasajero '+pasajeroEliminar.codigo_pasajero+' eliminado correctamente');
   window.location.reload();
 }
 //Función para recargar la página de forma automatica donde se requier, especificamente para el botón cancelar
